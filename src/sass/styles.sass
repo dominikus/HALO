@@ -1,11 +1,13 @@
 // customize bootstrap variables here:
 @import variables
 @import bootstrap
+@import compass/css3/user-interface
 
 // sticky footer code
 
 html, body
 	height: 100%
+	font-family: Helvetica
 
 .wrapper
 	min-height: 100%
@@ -23,3 +25,21 @@ footer
 	background: #F0F0F0
 	padding-top: .5em
 
+
+#vis
+	width: 100%
+	height: 600px
+	background: #dedede
+
+	.ttip
+		width: 250px
+		background: white
+		color: black
+		z-index: 999
+		position: absolute
+		+user-select(none)
+
+
+	.link
+		stroke: #000
+		opacity: 0.1

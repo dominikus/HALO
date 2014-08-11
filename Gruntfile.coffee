@@ -30,12 +30,12 @@ module.exports = (grunt) ->
 		"sftp-deploy":
 			default:
 				auth:
-					host: 'starling.columba.uberspace.de'
+					host: 'indus.uberspace.de'
 					port: 22,
 					authKey: 'key1'
 
 				src: 'dist'
-				dest: '/var/www/virtual/starling/html/wef/transformation-maps/'
+				dest: '/home/dominiku/html/halo'
 				exclusions: ['.sass-cache']
 				progress: true
 

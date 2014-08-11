@@ -4,6 +4,7 @@
 class App extends Backbone.Router
 	views: {}
 	models: {}
+	data: {}
 
 	routes:
 		'*path': 'pageChange'
@@ -17,4 +18,4 @@ class App extends Backbone.Router
 
 # -------------------
 
-app = new App()
+window.app = new App()

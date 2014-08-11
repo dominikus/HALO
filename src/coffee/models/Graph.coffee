@@ -27,10 +27,10 @@ class window.Links extends Backbone.Collection
 
 $(window).on "data-loaded", () ->
 	window.app.models.nodes = new Nodes()
-	window.app.models.links = Links()
+	window.app.models.links = new Links()
 
 	for p, i in window.app.data.graph.nodes
-		t = window.app.models.graph.create(p)
+		t = window.app.models.nodes.create(p)
 	for p, i in window.app.data.graph.links
 		l = window.app.models.links.create(p)
 
