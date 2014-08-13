@@ -65,6 +65,10 @@ module.exports = (grunt) ->
 				files: ['src/data/**/*']
 				tasks: ['copy']
 
+			php:
+				files: ['src/php/**/*']
+				tasks: ['copy']
+
 			images:
 				files: ['src/images/*.png,jpg,gif']
 				tasks: ['copy']
@@ -101,6 +105,7 @@ module.exports = (grunt) ->
 				options:
 					port: 8000
 					base: './<%= grunt.config.get("environment") %>/'
+
 
 		# dist
 
@@ -147,6 +152,11 @@ module.exports = (grunt) ->
 						expand: true
 						cwd: 'src'
 						src: 'data/**/*'
+						dest: '<%= grunt.config.get("environment") %>/'
+					,
+						expand: true
+						cwd: 'src'
+						src: 'php/**/*'
 						dest: '<%= grunt.config.get("environment") %>/'
 					]
 
